@@ -2,6 +2,15 @@
 
 A browser FPS set in a deep-level subway station, built with Three.js. Every texture, model and sound is generated in code: there are no asset files.
 
+Created with Claude Opus 5.5.
+
+![Halden Cross platform](docs/station.jpg)
+
+| | |
+| --- | --- |
+| ![Shotgun against a walker at Saltmarsh](docs/combat.jpg) | ![Train waiting with doors open at Ostwick](docs/boarding.jpg) |
+| ![Inside the train car](docs/train.jpg) | ![Train arriving at Greyfriars Gate](docs/arrival.jpg) |
+
 ## Run
 
 ```sh
