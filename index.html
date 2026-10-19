@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Last Train Out</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%23c2372f%22/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <div id="hud" class="hidden">
+    <div id="top">
+      <div id="station-plate"><span id="station-name">Halden Cross</span></div>
+      <div id="wave-line"><span id="wave-label">Wave 1</span><span class="dot">·</span><span id="enemies-left">0 left</span></div>
+    </div>
+    <div id="objective"></div>
+    <div id="crosshair"><i class="t"></i><i class="b"></i><i class="l"></i><i class="r"></i><b></b></div>
+    <div id="hitmarker"></div>
+    <div id="health">
+      <div class="label">Health</div>
+      <div class="value"><span id="hp">100</span></div>
+      <div class="bar"><div id="hp-bar"></div></div>
+    </div>
+    <div id="ammo">
+      <div class="label" id="weapon-name">K-17 Rifle</div>
+      <div class="value"><span id="mag">30</span><span class="slash">/</span><span id="reserve">150</span></div>
+      <div id="weapon-slots"><span data-slot="0">1 Pistol</span><span data-slot="1">2 Rifle</span><span data-slot="2">3 Shotgun</span></div>
+    </div>
+    <div id="score"><span id="kills">0</span> kills</div>
+    <div id="toast"></div>
+  </div>
+
+  <div id="title" class="screen">
+    <div class="panel">
+      <div class="sign"><span>Last Train Out</span></div>
+      <p class="lede">The network is sealed. The trains still run. Hold each platform until the next train comes, then get on it.</p>
+      <div class="controls">
+        <div><kbd>W A S D</kbd> move</div>
+        <div><kbd>Shift</kbd> sprint</div>
+        <div><kbd>Space</kbd> jump / climb</div>
+        <div><kbd>Mouse</kbd> aim, fire</div>
+        <div><kbd>Right mouse</kbd> aim down sights</div>
+        <div><kbd>R</kbd> reload</div>
+        <div><kbd>1 2 3</kbd> / wheel switch weapon</div>
+        <div><kbd>Esc</kbd> pause</div>
+      </div>
+      <button id="start" disabled>Building station…</button>
+      <p class="fine">Headphones recommended. Stand clear of the platform edge when a train arrives.</p>
+    </div>
+  </div>
+
+  <div id="pause" class="screen hidden">
+    <div class="panel small">
+      <div class="sign"><span>Paused</span></div>
+      <button id="resume">Resume</button>
+    </div>
+  </div>
+
+  <div id="dead" class="screen hidden">
+    <div class="panel">
+      <div class="sign red"><span>End of the line</span></div>
+      <div id="dead-stats"></div>
+      <button id="restart">Ride again</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
