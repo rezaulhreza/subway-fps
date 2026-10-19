@@ -2,7 +2,7 @@
 
 A browser FPS set in a deep-level subway station, built with Three.js. Every texture, model and sound is generated in code: there are no asset files.
 
-Created with Claude Opus 5.5.
+Created with Claude Opus 5.5 at xhigh effort.
 
 ![Halden Cross platform](docs/station.jpg)
 
